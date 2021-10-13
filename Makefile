@@ -1,8 +1,8 @@
 main: main.o caesar.o vigenere.o
 	g++ -o main main.o caesar.o vigenere.o
 
-tests: tests.o funcs.o
-	g++ -o tests tests.o funcs.o 
+tests: tests.o 
+	g++ -o tests tests.o caesar.o vigenere.o
 
 main.o: main.cpp
 
