@@ -26,7 +26,7 @@ std::string decryptCaesar(std::string ciphertext, int rshift){
 std::string decryptVigenere(std::string ciphertext, std::string keyword){
     std::string decryptShift = "";
     for(int i = 0; i < keyword.length(); i++){
-        decryptShift += shiftChar(keyword[i], 26 - (keyword[i]-97))
+        decryptShift += shiftChar(keyword[i], 26 - ((keyword[i]-97) * 2));
     }
     return encryptVigenere(ciphertext, decryptShift);
 }
