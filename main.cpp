@@ -1,9 +1,9 @@
 #include <iostream>
 
 
-#include "funcs.cpp"
-#include "caesar.cpp"
-#include "vigenere.cpp"
+#include "funcs.h"
+#include "caesar.h"
+#include "vigenere.h"
 
 int main()
 {
