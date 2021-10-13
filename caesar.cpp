@@ -18,6 +18,9 @@ but can use them and the Makefile as a starting point.
 #include <string>
 
 char shiftChar(char c, int rshift) { 
+    while (rshift < 0){
+        rshift+= 26;
+    }
     std::string alphabet = "abcdefghijklmnopqrstuvwxyz"; 
 
     bool isAlphabetic = false; 

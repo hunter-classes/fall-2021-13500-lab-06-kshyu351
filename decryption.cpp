@@ -19,10 +19,14 @@ tests.cpp.
 #include "caesar.h"
 #include "decryption.h"
 
-std::string decryptCaesar(std::string ciphertext, std::string rshift){
-    return "";
+std::string decryptCaesar(std::string ciphertext, int rshift){
+    return encryptCaesar(ciphertext, 26-rshift);
 }
 
-std::string decryptVigenere(std::string ciphertext, std::string rshift){
-    return "";
+std::string decryptVigenere(std::string ciphertext, std::string keyword){
+    std::string decryptShift = "";
+    for(int i = 0; i < keyword.length(); i++){
+        decryptShift += shiftChar(keyword[i], 26 - (keyword[i]-97))
+    }
+    return encryptVigenere(ciphertext, decryptShift);
 }

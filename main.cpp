@@ -4,6 +4,7 @@
 #include "funcs.h"
 #include "caesar.h"
 #include "vigenere.h"
+#include "decryption.h"
 
 int main()
 {
@@ -22,5 +23,8 @@ int main()
 
   std::string test = encryptVigenere("Hello, world!", "cake");
   std::cout << test << std::endl;
+
+  std::cout << decryptCaesar(encryptCaesar("Way to Go!", 5), 5);
+  std::cout << decryptVigenere(encryptVigenere("Hello, world!", "cake"), "cake");
 
 }
