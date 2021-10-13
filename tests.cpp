@@ -20,8 +20,15 @@ TEST_CASE("caesar.cpp") {
 
 TEST_CASE("vigenere.cpp") { 
 	CHECK(encryptVigenere("Hello, world!", "cake") == "Jevpq, Wyvnd!");
+    CHECK(encryptVigenere("Hi", "cake") == "Ji");
+    CHECK(encryptVigenere("abc", "bbc") == "bce");
+
    
 }
+
+
+   
+
 
 
 

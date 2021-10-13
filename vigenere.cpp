@@ -34,20 +34,17 @@ std::string encryptVigenere(std::string plaintext, std::string keyword) {
             // }
         }
     }
-
+    int index = 0;
     for (int a = 0; a < plaintext.length(); a++) { 
-        for (int b = 0; b < keyword.length(); b++) { 
-            if (isalpha(plaintext[a])) { 
-                output += shiftChar(plaintext[a], keyword[b]); 
-            }
-            else { 
-                a--;
-            }
-            
+        if (isalpha(plaintext[a])) { 
+            output += shiftChar(plaintext[a], keyword[index%keyword.length()]-97); 
+            index++;
         }
+        else{
+            output += plaintext[a];
+        }           
     }
-
-    return output; 
+    return output;
 }
             
 

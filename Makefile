@@ -1,13 +1,12 @@
-main: main.o funcs.o caesar.o vigenere.o
-	g++ -o main main.o funcs.o caesar.o vigenere.o
+main: main.o caesar.o vigenere.o
+	g++ -o main main.o caesar.o vigenere.o
 
 tests: tests.o funcs.o
 	g++ -o tests tests.o funcs.o 
 
+main.o: main.cpp
 
-main.o: main.cpp funcs.h
-
-tests.o: tests.cpp doctest.h funcs.h 
+tests.o: tests.cpp doctest.h
 
 funcs.o: funcs.cpp funcs.h
 
